@@ -1,0 +1,14 @@
+@use "_variables.scss" as _variables;
+
+.shard-body {
+	@include _variables.original-color-color;
+}
+
+@import url("./shard-a-scss.scss");
+@import url("./shard-card-scss.scss");
+@import url("./shard-div-scss.scss");
+@import url("./shard-h-scss.scss");
+@import url("./shard-layout-scss.scss");
+@import url("./shard-p-scss.scss");
+@import url("./shard-nav-scss.scss");
+@import url("./shard-button-scss");

@@ -1,0 +1,41 @@
+@use "_variables.scss" as _variables;
+
+.shard-button {
+	appearance: none;
+	// border-style: dotted;
+	border-radius: 6px;
+	box-sizing: border-box;
+	@include _variables.original-background-color;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px;
+	padding: 6px 16px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	margin: 5px;
+	border: none;
+}
+
+.shard-button:focus:not(:focus-visible):not(.focus-visible) {
+	box-shadow: none;
+	outline: none;
+}
+
+.shard-button:hover {
+	@include _variables.action-background-color;
+}
+
+.shard-button:disabled {
+	background-color: gray;
+	color: darkgray;
+	cursor: default;
+}
+
+.shard-button:active {
+	@include _variables.action-background-color;
+	box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+}

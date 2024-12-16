@@ -1,0 +1,19 @@
+$brand-color: #ff5630;
+$original-color: #ffb897;
+$action-color: #ff7231;
+
+@mixin original-color-color {
+	color: $original-color !important;
+}
+
+@mixin original-background-color {
+	background-color: $original-color !important;
+}
+
+@mixin action-background-color {
+	background-color: $action-color !important;
+}
+
+@mixin action-color-color {
+	color: $action-color !important;
+}

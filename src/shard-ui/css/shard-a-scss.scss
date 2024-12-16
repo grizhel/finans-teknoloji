@@ -1,0 +1,9 @@
+@use "_variables.scss" as _variables;
+
+.shard-a {
+	text-decoration: none;
+}
+
+.shard-a:hover {
+	cursor: pointer;
+}

@@ -1,0 +1,113 @@
+$small: 500px;
+$medium: 700px;
+$content-left: 20%;
+$content-right: 79%;
+$footer-left: 68%;
+$footer-right: 40%;
+
+.shard-layout-template {
+	position: relative;
+}
+
+.shard-header {
+	background-color: inherit;
+}
+
+.shard-layout-header {
+	width: 100%;
+}
+
+.shard-border {
+	background-color: inherit;
+}
+
+.shard-border-left {
+	background-color: inherit;
+}
+
+.shard-border-header {
+	border-bottom-style: dotted;
+}
+
+.shard-border-bottom {
+	border-bottom-style: dotted;
+}
+
+.shard-border-left {
+	border-left-style: none;
+}
+
+.shard-border-right {
+	@media screen and (max-width: $small) {
+		border-top-style: dotted;
+	}
+	@media screen and (max-width: $medium) and (min-width: $small) {
+		border-left-style: dotted;
+	}
+	@media screen and (min-width: $medium) {
+		border-left-style: dotted;
+	}
+}
+
+.shard-border-footer {
+	border-top-style: dotted;
+}
+
+.shard-layout-banner {
+	height: 10vh;
+	width: 100%;
+	max-height: 63%;
+	min-height: 20%;
+	background-position: left;
+	display: flex;
+}
+
+.shard-layout-footer-business-card {
+	height: 10vh;
+	width: 100%;
+	max-height: 63%;
+	min-height: 20%;
+	background-position: right;
+	display: flex;
+}
+
+.shard-content {
+	padding: 5px;
+	color: black;
+	display: flex;
+	min-height: 70vh;
+}
+
+.shard-floating-div {
+	display: inline-block;
+}
+
+.shard-floating-div-left {
+	@media screen and (max-width: $small) {
+		float: none;
+		width: 100%;
+	}
+	@media screen and (max-width: $medium) and (min-width: $small) {
+		float: left;
+		width: $content-left;
+	}
+	@media screen and (min-width: $medium) {
+		float: left;
+		width: $content-left;
+	}
+}
+
+.shard-floating-div-right {
+	@media screen and (max-width: $small) {
+		float: none;
+		width: 100%;
+	}
+	@media screen and (max-width: $medium) and (min-width: $small) {
+		float: right;
+		width: $content-right;
+	}
+	@media screen and (min-width: $medium) {
+		float: right;
+		width: $content-right;
+	}
+}

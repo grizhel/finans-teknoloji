@@ -1,0 +1,48 @@
+{
+	"name": "finans-teknoloji",
+	"version": "1.0.0",
+	"main": "src/index.js",
+	"scripts": {
+		"css-build": "npx sass src/css/shard.scss dist/css/shard.scss",
+		"start": "webpack-dev-server --config ./webpack.config.js --mode development",
+		"build": "webpack --mode production"
+	},
+	"author": "grizhël",
+	"license": "LGPL-3.0-or-later",
+	"description": "",
+	"devDependencies": {
+		"@babel/cli": "^7.26.4",
+		"@babel/core": "^7.26.0",
+		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+		"@babel/preset-env": "^7.26.0",
+		"@babel/preset-react": "^7.26.3",
+		"copy-webpack-plugin": "^12.0.2",
+		"css-loader": "^7.1.2",
+		"html-webpack-plugin": "^5.6.3",
+		"sass": "^1.83.0",
+		"sass-loader": "^16.0.4",
+		"style-loader": "^4.0.0"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"dependencies": {
+		"babel-loader": "^9.2.1",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"react-router": "^7.0.1",
+		"save-dev": "^0.0.1-security",
+		"webpack": "^5.97.1",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^5.2.0"
+	}
+}
