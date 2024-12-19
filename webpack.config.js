@@ -1,6 +1,6 @@
-const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
-var HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
 	entry: "./src/index.js",
 	output: {
@@ -33,18 +33,42 @@ module.exports = {
 				test: /\.js$/,
 				use: ["babel-loader"],
 			},
+			{
+				test: /\.(png|jpe?g|gif|ico)$/i,
+				use: [
+					{
+						loader: "file-loader",
+					},
+				],
+			},
 		],
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			filename: "index.html",
-			template: "./public/index.html",
+			template: "./src/html/index.html",
 		}),
 		new CopyPlugin({
 			patterns: [
-				{ from: "src/resources/media", to: "media" },
-				{ from: "src/scripts", to: "scripts" },
-				{ from: "src/css", to: "css" },
+				{ from: path.resolve(__dirname, "src/resources"), to: "/resources" },
+				{
+					from: path.resolve(__dirname, "src/resources/media"),
+					to: "/resources/media",
+				},
+				{
+					from: path.resolve(__dirname, "src/resources/media/misc"),
+					to: "/resources/media/misc",
+				},
+				{
+					from: path.resolve(__dirname, "src/resources/media/ico"),
+					to: "/resources/media/ico",
+				},
+				{
+					from: path.resolve(__dirname, "src/resources/media/personel"),
+					to: "/resources/media/personel",
+				},
+				{ from: path.resolve(__dirname, "src/scripts"), to: "scripts" },
+				{ from: path.resolve(__dirname, "src/css"), to: "css" },
 			],
 		}),
 	],

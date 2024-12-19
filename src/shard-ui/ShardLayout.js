@@ -23,7 +23,8 @@ export default function ShardLayout(props) {
 					))}
 				</ShardSidebarContainer>
 			</ShardDiv>
-			<ShardDiv className="shard-border-right shard-floating-div shard-floating-div-right">
+			{/* <ShardDiv className="shard-border-right shard-floating-div shard-floating-div-right"> */}
+			<ShardDiv className="shard-floating-div">
 				<ShardDiv className="shard-content">{props.children}</ShardDiv>
 			</ShardDiv>
 			<ShardDiv className="shard-border-footer shard-layout-footer-business-card shard-layout-footer">

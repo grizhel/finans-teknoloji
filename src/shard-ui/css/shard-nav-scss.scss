@@ -3,6 +3,7 @@
 .shard-nav {
 	position: sticky;
 	top: 0;
+	background-color: white;
 }
 
 .shard-nav-top {
@@ -31,9 +32,9 @@
 }
 
 .shard-sidebar-navlink-item {
+	@include _variables.original-color-color;
 	text-decoration: none;
 	font-size: 2rem;
-	@include _variables.original-color-color;
 }
 
 .shard-sidebar-navlink-item:hover {
@@ -50,5 +51,5 @@
 }
 
 .shard-sidebar-navlink-item-selected:hover {
-	background-color: inherit;
+	@include _variables.original-background-color;
 }
