@@ -1,0 +1,47 @@
+$small: 500px;
+$medium: 700px;
+
+.slide-show {
+	padding: 10px;
+}
+
+.shard-slide-image {
+	height: 220px;
+	width: 175px;
+
+	@media screen and (max-width: $small) {
+		float: none;
+		width: 100%;
+	}
+	@media screen and (max-width: $medium) and (min-width: $small) {
+		float: left;
+		margin-right: 10px;
+	}
+	@media screen and (min-width: $medium) {
+		float: left;
+		margin-right: 10px;
+	}
+}
+
+.shard-slide-content {
+	@media screen and (max-width: $small) {
+		float: none;
+		width: 100%;
+	}
+	@media screen and (max-width: $medium) and (min-width: $small) {
+		float: right;
+		width: calc(95% - 175px);
+		display: contents;
+	}
+	@media screen and (min-width: $medium) {
+		float: right;
+		width: calc(95% - 175px);
+		display: contents;
+	}
+}
+
+.shard-slide-container {
+	width: 100% !important;
+	margin-right: 10px;
+	margin-left: 10px;
+}

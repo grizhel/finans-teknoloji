@@ -6,6 +6,7 @@ export default function ShardDiv(props) {
 	const ReactElement = createElement("div", {
 		className: classNames,
 		children: props.children,
+		style: props.style,
 	});
 
 	return ReactElement;

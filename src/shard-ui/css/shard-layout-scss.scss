@@ -65,17 +65,17 @@ $footer-right: 40%;
 	background-position: right;
 }
 
-.shard-content {
+.shard-layout-content {
 	color: black;
 	display: flex;
 }
 
-.shard-floating-div {
+.shard-layout-floating-div {
 	background-color: inherit;
 	min-height: calc(100vh - 14.1rem);
 }
 
-.shard-floating-div-left {
+.shard-layout-floating-div-left {
 	@media screen and (max-width: $small) {
 		float: none;
 		width: 100%;
@@ -90,7 +90,7 @@ $footer-right: 40%;
 	}
 }
 
-.shard-floating-div-right {
+.shard-layout-floating-div-right {
 	@media screen and (max-width: $small) {
 		float: none;
 		width: 100%;

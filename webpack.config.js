@@ -1,18 +1,18 @@
 const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+
 module.exports = {
 	entry: "./src/index.js",
 	output: {
-		path: path.resolve(__dirname, "dist"),
-		filename: "bundle.js",
+		path: path.resolve(__dirname, "public"),
+		filename: "[name].js",
 	},
 	devtool: "inline-source-map",
 	devServer: {
 		compress: true,
 		port: 3000,
-		static: "./dist",
-
+		static: "./public",
 		hot: true,
 		client: {
 			reconnect: true,
@@ -22,12 +22,8 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.css$/,
-				use: ["style-loader", "css-loader"],
-			},
-			{
-				test: /\.scss$/,
-				use: ["style-loader", "css-loader", "sass-loader"],
+				test: /\.(css|scss)$/i,
+				use: ["style-loader", "css-loader", "sass-loader", "postcss-loader"],
 			},
 			{
 				test: /\.js$/,
@@ -35,40 +31,34 @@ module.exports = {
 			},
 			{
 				test: /\.(png|jpe?g|gif|ico)$/i,
-				use: [
-					{
-						loader: "file-loader",
-					},
-				],
+				use: ["file-loader"],
 			},
 		],
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			filename: "index.html",
-			template: "./src/html/index.html",
+			template: "./src/html/index.ejs",
+			title: "Finans Teknoloji",
+			meta: {
+				viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
+				keywords: "yazılım, finans",
+				description: "Finans ve Teknolojinin Buluşma Noktası",
+			},
+			favicon: path.resolve(__dirname, "src/html/media/misc/favicon.ico"),
+			js: ["scripts/init.js"],
+			css: ["css/general.scss"],
 		}),
 		new CopyPlugin({
 			patterns: [
-				{ from: path.resolve(__dirname, "src/resources"), to: "/resources" },
 				{
-					from: path.resolve(__dirname, "src/resources/media"),
-					to: "/resources/media",
+					from: path.resolve(__dirname, "src/html/scripts"),
+					to: "scripts",
 				},
 				{
-					from: path.resolve(__dirname, "src/resources/media/misc"),
-					to: "/resources/media/misc",
+					from: path.resolve(__dirname, "src/html/css"),
+					to: "css",
 				},
-				{
-					from: path.resolve(__dirname, "src/resources/media/ico"),
-					to: "/resources/media/ico",
-				},
-				{
-					from: path.resolve(__dirname, "src/resources/media/personel"),
-					to: "/resources/media/personel",
-				},
-				{ from: path.resolve(__dirname, "src/scripts"), to: "scripts" },
-				{ from: path.resolve(__dirname, "src/css"), to: "css" },
 			],
 		}),
 	],

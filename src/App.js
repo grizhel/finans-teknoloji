@@ -3,12 +3,19 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router";
 import About from "./About";
 import Home from "./Home";
 import ShardLayout from "./shard-ui/ShardLayout";
+import Product from "./Product";
+import Contact from "./Contact";
 
 export default function App() {
 	const [flag, setFlag] = useState(false);
 	const menuLinks = [
 		{ link: "/anasayfa", text: "Ana Sayfa" },
-		{ link: "/hakkinda", text: "Hakkında" },
+		{
+			link: "/urunler",
+			text: "Ürünler",
+		},
+		{ link: "/hakkimizda", text: "Hakkımızda" },
+		{ link: "/iletisim", text: "İletişim" },
 	];
 
 	useEffect(() => {
@@ -22,7 +29,9 @@ export default function App() {
 					<Routes>
 						<Route path="/" element={<Navigate to={"/anasayfa"} />} />
 						<Route path="/anasayfa" element={<Home />} />
-						<Route path="/hakkinda" element={<About />} />
+						<Route path="/urunler" element={<Product />} />
+						<Route path="/hakkimizda" element={<About />} />
+						<Route path="/iletisim" element={<Contact />} />
 					</Routes>
 				</ShardLayout>
 			</BrowserRouter>

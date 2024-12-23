@@ -2,6 +2,8 @@
 
 .shard-body {
 	@include _variables.original-color-color;
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 @import url("./shard-a-scss.scss");
@@ -12,3 +14,5 @@
 @import url("./shard-p-scss.scss");
 @import url("./shard-nav-scss.scss");
 @import url("./shard-button-scss");
+@import url("./shard-slide-scss");
+@import url("./shard-span-scss");

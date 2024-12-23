@@ -1,6 +1,6 @@
 import React from "react";
 export default function ShardButton(props) {
-	const { href, className, children } = props;
+	const { className, children } = props;
 	const classNames = `shard-button ${className}`;
 	return (
 		<button
@@ -9,7 +9,10 @@ export default function ShardButton(props) {
 					props.onClick();
 				}
 			}}
-			className={classNames}>
+			className={classNames}
+			style={props.style}
+			onMouseDown={props.onMouseDown}
+			onMouseLeave={props.onMouseLeave}>
 			{children}
 		</button>
 	);

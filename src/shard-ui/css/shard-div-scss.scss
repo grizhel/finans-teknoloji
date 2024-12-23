@@ -6,6 +6,20 @@
 	background-color: black;
 }
 
-.shard-div-relative {
+.shard-floating-div {
 	position: relative;
+}
+
+.shard-floating-div-left {
+	float: left;
+}
+
+.shard-floating-div-right {
+	float: right;
+}
+
+.shard-div-center-50 {
+	text-align: center;
+	margin: auto;
+	width: 50%;
 }

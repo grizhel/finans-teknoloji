@@ -11,10 +11,13 @@
 	float: none;
 	align-items: flex-start;
 	border-bottom-style: dotted;
+	z-index: 2;
 }
 
 .shard-sidebar-container {
 	background-color: inherit;
+	position: relative;
+	display: inline-block;
 }
 
 .shard-sidebar-left-container {

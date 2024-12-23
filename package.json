@@ -3,11 +3,14 @@
 	"version": "1.0.0",
 	"main": "src/index.js",
 	"scripts": {
-		"css-build": "npx sass src/css/shard.scss dist/css/shard.scss",
 		"start": "webpack-dev-server --config ./webpack.config.js --mode development",
 		"build": "webpack --mode production"
 	},
 	"author": "grizhël",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/grizhel/finans-teknoloji.git"
+	},
 	"license": "LGPL-3.0-or-later",
 	"description": "",
 	"devDependencies": {
@@ -20,9 +23,11 @@
 		"css-loader": "^7.1.2",
 		"file-loader": "^6.2.0",
 		"html-webpack-plugin": "^5.6.3",
+		"postcss-loader": "^8.1.1",
 		"sass": "^1.83.0",
 		"sass-loader": "^16.0.4",
-		"style-loader": "^4.0.0"
+		"style-loader": "^4.0.0",
+		"url-loader": "^4.1.1"
 	},
 	"browserslist": {
 		"production": [
@@ -41,6 +46,7 @@
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"react-router": "^7.0.1",
+		"react-youtube": "^10.1.0",
 		"save-dev": "^0.0.1-security",
 		"webpack": "^5.97.1",
 		"webpack-cli": "^5.1.4",
