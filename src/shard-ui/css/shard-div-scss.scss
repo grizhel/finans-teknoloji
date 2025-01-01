@@ -18,8 +18,11 @@
 	float: right;
 }
 
-.shard-div-center-50 {
-	text-align: center;
+.shard-div-center {
 	margin: auto;
-	width: 50%;
+}
+
+.shard-div-center-container {
+	padding: 10px;
+	align-items: center;
 }

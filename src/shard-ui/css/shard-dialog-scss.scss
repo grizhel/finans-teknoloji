@@ -1,0 +1,41 @@
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.shard-dialog {
+	display: none;
+	cursor: pointer;
+	min-width: 100%;
+}
+
+.shard-dialog-inner {
+	color: #fff;
+	text-align: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.shard-dialog-inner::after {
+	border-width: 5px;
+	border-style: solid;
+	border-color: #ff5630 transparent transparent transparent;
+}
+
+.shard-dialog-show {
+	display: block;
+	animation: fadeIn 1s;
+}

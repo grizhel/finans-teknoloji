@@ -1,0 +1,36 @@
+$brand-color: #ff5630;
+$original-color: #ff7231;
+$action-color: #ff9d6f;
+
+.shard-ol {
+	padding-left: 50px;
+}
+.shard-li {
+	color: $brand-color;
+	padding-left: 16px;
+	margin-top: 24px;
+	position: relative;
+	font-size: 16px;
+	line-height: 20px;
+
+	&:before {
+		content: "";
+		display: block;
+		height: 24px;
+		width: 30px;
+		border-radius: 50%;
+		border: 2px solid $original-color;
+		position: absolute;
+		top: -4px;
+		left: -30px;
+	}
+}
+
+.shard-ol .alternating-colors {
+	.shard-li:nth-child(odd):before {
+		border-color: $original-color;
+	}
+	.shard-li:nth-child(even):before {
+		border-color: $action-color;
+	}
+}

@@ -3,10 +3,10 @@ import React, { createElement } from "react";
 export default function ShardP(props) {
 	const classNames = `shard-p ${props.className ?? ""}`;
 
-	const ReactElement = createElement("p", {
+	const thisProps = {
 		className: `${classNames}`,
 		children: props.children,
-	});
+	};
 
-	return ReactElement;
+	return <p {...thisProps}>{props.children}</p>;
 }

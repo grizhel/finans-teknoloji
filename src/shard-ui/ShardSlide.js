@@ -51,14 +51,25 @@ export default function ShardSlide(props) {
 			<ShardDiv className="shard-slide-container">
 				{props.slides.map((q, i) => (
 					<ShardDiv key={i} style={{ width: "100%" }} className="slide-show">
-						<ShardDiv
-							style={{
-								background: `url(${q.img}) no-repeat`,
-							}}
-							className="shard-slide-image"></ShardDiv>
-						<ShardDiv className="shard-slide-content">
-							<ShardP>{q.content}</ShardP>
-						</ShardDiv>
+						<table>
+							<tr>
+								<td>
+									<ShardDiv
+										style={{
+											background: `url(${q.img}) no-repeat`,
+										}}
+										className="shard-slide-image"></ShardDiv>
+									<ShardDiv className="shard-slide-content">
+										<ShardDiv>{q.content}</ShardDiv>
+									</ShardDiv>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<ShardDiv>{q.contentBelow}</ShardDiv>
+								</td>
+							</tr>
+						</table>
 					</ShardDiv>
 				))}
 			</ShardDiv>

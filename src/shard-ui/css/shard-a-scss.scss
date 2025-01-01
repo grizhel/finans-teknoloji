@@ -1,9 +1,16 @@
-@use "_variables.scss" as _variables;
-
-.shard-a {
+a,
+.shard-a,
+.shard-a:visited,
+.shard-a:hover {
+	color: #ff9d6f;
+	cursor: pointer;
+	border: none;
+	box-shadow: none;
 	text-decoration: none;
+	text-decoration-color: white;
+	text-decoration-line: underline;
 }
 
 .shard-a:hover {
-	cursor: pointer;
+	color: #ff7231;
 }

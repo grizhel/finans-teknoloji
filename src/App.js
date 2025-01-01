@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router";
 import About from "./About";
-import Home from "./Home";
+import LandingPage from "./LandingPage";
 import ShardLayout from "./shard-ui/ShardLayout";
-import Product from "./Product";
+import Products from "./Products";
 import Contact from "./Contact";
 
 export default function App() {
@@ -15,7 +15,7 @@ export default function App() {
 			text: "Ürünler",
 		},
 		{ link: "/hakkimizda", text: "Hakkımızda" },
-		{ link: "/iletisim", text: "İletişim" },
+		{ link: "/iletisim", text: "İletişim - Linkler" },
 	];
 
 	useEffect(() => {
@@ -28,8 +28,8 @@ export default function App() {
 				<ShardLayout menuLinks={menuLinks}>
 					<Routes>
 						<Route path="/" element={<Navigate to={"/anasayfa"} />} />
-						<Route path="/anasayfa" element={<Home />} />
-						<Route path="/urunler" element={<Product />} />
+						<Route path="/anasayfa" element={<LandingPage />} />
+						<Route path="/urunler" element={<Products />} />
 						<Route path="/hakkimizda" element={<About />} />
 						<Route path="/iletisim" element={<Contact />} />
 					</Routes>

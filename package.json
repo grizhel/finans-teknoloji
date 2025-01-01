@@ -6,7 +6,10 @@
 		"start": "webpack-dev-server --config ./webpack.config.js --mode development",
 		"build": "webpack --mode production"
 	},
-	"author": "grizhël",
+	"author": {
+		"name": "grizhël",
+		"email": "emreyilmazin@gmail.com.tr"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/grizhel/finans-teknoloji.git"
